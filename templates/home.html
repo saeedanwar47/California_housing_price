@@ -4,9 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ML API</title>
 </head>
 <body>
-    <h1>Saeed Anwar</h1>
+ <div class="mb-3">
+    <h1>California house price prediction</h1>
+    <form action="{{url_for('predict')}}" method="post">
+        <input class="form-control form-control-sm" type="text" name="MedInc" placeholder="MedInc" required="required"><br>
+        <input class="form-control form-control-sm" type="text" name="HouseAge" placeholder="HouseAge" required="required"><br>
+        <input class="form-control form-control-sm" type="text" name="AveRooms" placeholder="AveRooms" required="required"><br>
+        <input class="form-control form-control-sm" type="text" name="AveBedrms" placeholder="AveBedrms" required="required"><br>
+        <input class="form-control form-control-sm" type="text" name="Population" placeholder="Population" required="required"><br>
+        <input class="form-control form-control-sm" type="text" name="AveOccup" placeholder="AveOccup" required="required"><br>
+        <input class="form-control form-control-sm" type="text" name="Latitude" placeholder="Latitude" required="required"><br>
+        <input class="form-control form-control-sm" type="text" name="Longitude" placeholder="Longitude" required="required"><br>
+
+        <button type="submit" class="btn btn-outline-primary">Submit</button>
+
+
+    </form>
+ </div>
+
+ {{prediction_text}}
 </body>
 </html>
